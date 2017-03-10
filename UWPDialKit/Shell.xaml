@@ -1,0 +1,93 @@
+﻿<Page
+    x:Class="UWPDialKit.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPDialKit"
+    xmlns:helpers="using:UWPDialKit.Helpers"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="NavMenuItemTemplate" x:DataType="helpers:NavMenuItem">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>              
+                <Image Height="28"
+                       Stretch="Uniform"
+                       Source="{x:Bind Image}"
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Left" />
+                <TextBlock x:Name="Text" Grid.Column="1" 
+                           Text="{x:Bind Label}" 
+                           Style="{StaticResource BodyTextBlockStyle}" 
+                           TextWrapping="NoWrap" 
+                           VerticalAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+        
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:Name="RootSplitView"    
+                   PaneBackground="LightGray"
+                   DisplayMode="Inline"
+                   OpenPaneLength="200">
+            <SplitView.Pane>
+                <ListView x:Name="NavMenuList" 
+                          Background="LightGray"                            
+                          Margin="0,52,0,0"
+                          IsItemClickEnabled="True"     
+                          ItemClick="NavMenuList_ItemClick"
+                          ItemTemplate="{StaticResource NavMenuItemTemplate}">
+                </ListView>
+            </SplitView.Pane>
+
+            <SplitView.Content>
+                <Grid>
+                    <Frame Name="AppFrame" />
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+        <ToggleButton x:Name="TogglePaneButton"
+                      TabIndex="1"
+                      Foreground="Black"
+                      Background="LightGray"
+                      Style="{StaticResource SplitViewTogglePaneButtonStyle}"
+                      IsChecked="{Binding IsPaneOpen, ElementName=RootSplitView, Mode=TwoWay}" />
+
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="900" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="RootSplitView.DisplayMode" Value="CompactInline"/>
+                        <Setter Target="RootSplitView.IsPaneOpen" Value="True"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="RootSplitView.DisplayMode" Value="CompactOverlay"/>
+                        <Setter Target="RootSplitView.IsPaneOpen" Value="False"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="RootSplitView.DisplayMode" Value="Overlay"/>
+                        <Setter Target="RootSplitView.IsPaneOpen" Value="False"/>                     
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>           
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>
