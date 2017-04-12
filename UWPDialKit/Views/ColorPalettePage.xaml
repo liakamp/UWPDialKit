@@ -50,14 +50,14 @@
                             Margin="5">
                     <Border BorderBrush="Gray" 
                             BorderThickness="1" 
-                            Name="SelectedColor" 
+                            Name="SelectedColorBorder" 
                             Background="White" 
                             Width="30" 
                             Height="20" 
                             VerticalAlignment="Top" />
                     <Border BorderBrush="Gray" 
                             BorderThickness="1" 
-                            Name="CurrentColor" 
+                            Name="CurrentColorBorder" 
                             Background="White" 
                             Width="30" 
                             Height="20" 
@@ -76,7 +76,8 @@
                     <Run Text="To use the Dial Color Palette:"/><LineBreak/>
                     <Run Text="-Open the Dial menu and select the Palette"/><LineBreak/>
                     <Run Text="-Rotate the Dial to find the color you want"/><LineBreak/>
-                    <Run Text="-Click using the Dial to set the current color as selected"/>
+                    <Run Text="-Click using the Dial to set the current color as selected and adjust saturation"/><LineBreak/>
+                    <Run Text="-Click again to set selected saturation."/>                    
                 </TextBlock>
             </StackPanel>
         </RelativePanel>
