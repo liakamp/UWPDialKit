@@ -14,7 +14,7 @@
             <Grid Name="Palette">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="60" />
                 </Grid.ColumnDefinitions>
                 
                 <Grid HorizontalAlignment="Center"
@@ -23,7 +23,14 @@
                       Width="350"
                       Height="350"
                       VerticalAlignment="Center">
-
+                    
+                    <Ellipse Height="350"
+                             Width="350"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"
+                             Fill="Black"
+                             Opacity="0.7"/>
+                    
                     <Path Fill="Black"  
                           Stroke="Gray"                            
                           RenderTransformOrigin=".5,.5"
@@ -47,7 +54,7 @@
                 <StackPanel Grid.Column="1" 
                             Orientation="Vertical" 
                             VerticalAlignment="Center" 
-                            Margin="5">
+                            Margin="12">                    
                     <Border BorderBrush="Gray" 
                             BorderThickness="1" 
                             Name="SelectedColorBorder" 
