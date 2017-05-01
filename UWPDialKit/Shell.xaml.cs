@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UWPDialKit.Helpers;
+using UWPDialKit.Views;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Input;
@@ -40,7 +41,13 @@ namespace UWPDialKit
                     Image =  "ms-appx:///Assets/menu_protractor.png",
                     Label = "Protractor",
                     DestPage = typeof(ProtractorPage)
-                }                           
+                },
+                new NavMenuItem()
+                {
+                    Image =  "ms-appx:///Assets/menu_text_size.png",
+                    Label = "Text Size",
+                    DestPage = typeof(TextPage)
+                }
            });
 
 
