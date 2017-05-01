@@ -5,6 +5,7 @@
     xmlns:local="using:UWPDialKit"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:UWPDialKit.Controls"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -23,32 +24,13 @@
                     <Run Text="-Open the Dial menu and select the Protractor"/><LineBreak/>
                     <Run Text="-Rotate the Dial to change the angle"/><LineBreak/>
             </TextBlock>
-            <TextBlock Name="AngleTxt" Style="{StaticResource SubheaderTextBlockStyle}" />
+            <TextBlock Name="AngleTxt" Style="{StaticResource SubheaderTextBlockStyle}" Text="{Binding ElementName=ProtractorControl, Path=CurrentAngle}" />
         </StackPanel>
 
-        <Grid Name="ProtractorContainer" Grid.Row="1">
-
-                <Image Source="ms-appx:///Assets/protractor_background.png"                       
-                       Margin="30"
-                       MaxHeight="400"/>
-                
-
-                <Border Background="LightGray" 
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Center"
-                        MaxWidth="500"
-                        Height="2" />
-                <Path Fill="Black"                        
-                      Stroke="Red"
-                      VerticalAlignment="Center"    
-                      RenderTransformOrigin=".5,.5"
-                      Name="AngleRay">
-                    <Path.RenderTransform>
-                        <RotateTransform Angle="0"/>
-                    </Path.RenderTransform>
-                </Path>
-
-            </Grid>       
+        <Grid Grid.Row="1">
+            <controls:Protractor x:Name="ProtractorControl"/>
+        </Grid>
+        
     </Grid>
 
 </Page>

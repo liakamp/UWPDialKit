@@ -5,16 +5,21 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWPDialKit", "UWPDialKit\UWPDialKit.csproj", "{7518B787-6626-4B44-AD7E-24EB959E66E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWPDialKit.Controls", "UWPDialKit.Controls\UWPDialKit.Controls.csproj", "{B2967930-FD51-4C97-A7F5-654E6993C587}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|ARM = Release|ARM
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Debug|ARM.ActiveCfg = Debug|ARM
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Debug|ARM.Build.0 = Debug|ARM
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -24,6 +29,7 @@ Global
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Debug|x86.ActiveCfg = Debug|x86
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Debug|x86.Build.0 = Debug|x86
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Debug|x86.Deploy.0 = Debug|x86
+		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Release|Any CPU.ActiveCfg = Release|x86
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Release|ARM.ActiveCfg = Release|ARM
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Release|ARM.Build.0 = Release|ARM
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Release|ARM.Deploy.0 = Release|ARM
@@ -33,6 +39,22 @@ Global
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Release|x86.ActiveCfg = Release|x86
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Release|x86.Build.0 = Release|x86
 		{7518B787-6626-4B44-AD7E-24EB959E66E3}.Release|x86.Deploy.0 = Release|x86
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Debug|ARM.Build.0 = Debug|ARM
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Debug|x64.ActiveCfg = Debug|x64
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Debug|x64.Build.0 = Debug|x64
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Debug|x86.ActiveCfg = Debug|x86
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Debug|x86.Build.0 = Debug|x86
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Release|ARM.ActiveCfg = Release|ARM
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Release|ARM.Build.0 = Release|ARM
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Release|x64.ActiveCfg = Release|x64
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Release|x64.Build.0 = Release|x64
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Release|x86.ActiveCfg = Release|x86
+		{B2967930-FD51-4C97-A7F5-654E6993C587}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

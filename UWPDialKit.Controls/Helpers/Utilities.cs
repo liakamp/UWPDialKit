@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.UI;
 
-namespace UWPDialKit.Helpers
+namespace UWPDialKit.Controls.Helpers
 {
     public static class Utilities
     {
@@ -23,7 +19,7 @@ namespace UWPDialKit.Helpers
             {
                 return currentAngle;
             }
-            
+
         }
 
         public static Color ConvertHSV2RGB(float hue, float saturation, float value)
