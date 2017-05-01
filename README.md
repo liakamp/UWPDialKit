@@ -7,3 +7,6 @@ Radial color palette
 
 Radial protractor
 ![ScreenCap](GitAssets/protractor.gif)
+
+Changing text size
+![ScreenCap](GitAssets/text_size.gif)
